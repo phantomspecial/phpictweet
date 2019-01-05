@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'TweetController@index')
+    ->middleware('auth');
+
+Auth::routes();
+
+Route::resource('tweet', 'TweetController')
+    ->middleware('auth');
