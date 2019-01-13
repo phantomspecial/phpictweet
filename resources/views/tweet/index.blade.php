@@ -20,7 +20,7 @@
                                 <li>
                                     <form action="/tweet/{{$tweet->id}}" method="post">
                                         {{csrf_field()}}
-                                        {{ method_field('delete') }}
+                                        {{method_field('delete')}}
                                         <input class="more_list_submit_btn" type="submit" value="削除">
                                     </form>
                                 </li>
