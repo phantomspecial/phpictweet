@@ -50,7 +50,7 @@ echo MySQL setting
 echo ------------------------------
 password=`cat /var/log/mysqld.log | grep "A temporary password" | tr ' ' '\n' | tail -n1`
 mysql -u root -p${password} --connect-expired-password < /vagrant/provisioner.sql
-sudo sh -c "echo 'binding-address=0.0.0.0' >> /etc/my.cnf"
+sudo sh -c "echo 'bind-address=0.0.0.0' >> /etc/my.cnf"
 
 echo ------------------------------
 echo gitignore

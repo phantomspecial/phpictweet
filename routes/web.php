@@ -11,10 +11,9 @@
 |
 */
 
-Route::get('/', 'TweetController@index')
-    ->middleware('auth');
+Route::get('/', 'TweetController@index');
+
 
 Auth::routes();
 
-Route::resource('tweet', 'TweetController')
-    ->middleware('auth');
+Route::resource('tweet', 'TweetController');
